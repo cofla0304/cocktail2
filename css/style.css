@@ -1,0 +1,112 @@
+/*----------------------------
+* メニュー開閉ボタン */
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type {
+    margin-left: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.row .three {
+    padding: 20px 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #2E3828;
+}
+
+.hamburger .line {
+    width: 28px;
+    height: 4px;
+    background-color: #2E3828;
+    display: flex;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+/*---------------------------*/
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
+}
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff2a;
+}
+
+.menu__item {
+    width: 100%;
+    height: auto;
+    padding: .5em 1em;
+    text-align: center;
+    color: #300c44;
+    box-sizing: border-box;
+    font-family: 'Abel';
+    font-size: 2vw;
+}
+
+/*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+/* アニメーション前のメニューの状態 */
+.menu {
+    transform: translateX(100vw);
+    transition: all .3s linear;
+}
+
+/* アニメーション後のメニューの状態 */
+.menu.is-active {
+    transform: translateX(0);
+}

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* about - 서브메뉴 */
+.sub-menu {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    transition: 0.5s;
+    display: flex;
+    /* Flex 컨테이너 설정 */
+    flex-direction: column;
+    /* 세로 방향으로 나열 */
+}
+
+.sub-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sub-menu {
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    transition-duration: 0.5s;
+}
+
+.main-nav-left:hover>.sub-menu {
+    height: 100%;
+    width: 500px;
+    overflow: hidden;
+}
+
+.sub-menu-list li {
+    line-height: 3rem;
+}
