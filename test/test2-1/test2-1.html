@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/gradient.css">
+    <link rel="stylesheet" href="../../css/style.css">    
+    <link rel="stylesheet" href="../../css/hr.css">
+
+
+    <script src="../../js/script.js"></script>
+
+
+    <style>
+        @font-face {
+            font-family: 'Saint Monica Italic';
+            font-weight: normal;
+            font-style: normal;
+            src: url('../fonts/SaintMonicaItalic.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Saint Monica Regular';
+            font-weight: normal;
+            font-style: normal;
+            src: url('../fonts/SaintMonicaRegular.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PyeongChangPeace';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+
+
+        /* header */
+        #header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            border-bottom: 1px solid #ff0000;
+            backdrop-filter: blur(10px)
+        }
+
+        #header ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header li a {
+            font-family: 'Abel';
+            padding: 35px;
+            display: inline-block;
+            text-transform: uppercase;
+            color: #ff006f;
+        }
+
+        /* footer */
+        #footer {
+            text-align: center;
+            font-family: 'Abel';
+            padding: 8px;
+            background: #fff;
+        }
+
+        #footer a {
+            color: #000;
+        }
+
+        /* section1 */
+        #section1 {
+            padding-top: 80px;
+        }
+
+        .text__effect1 {
+            text-align: center;
+            color: #ff0000;
+            font-size: 7vw;
+            line-height: 0.81;
+            font-family: 'Saint Monica Regular';
+            padding: 0 0 2vw 2vw;
+            margin-top: 2vw;
+            text-transform: uppercase;
+        }
+
+        .text__effect2 {
+            text-align: center;
+            color: #ff0000;
+            font-size: 2vw;
+            line-height: 0.81;
+            font-family: 'PyeongChangPeace';
+            padding: 0 0 0vw 2vw;
+            margin-top: 2.2vw;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ff0000;
+        }
+
+        .button {
+            background-color: #ff0000;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1vw;
+            font-family: 'PyeongChangPeace';
+            margin: 200px 40px;
+            cursor: pointer;
+        }
+
+        /* section2 */
+        #section2 {
+            background: #2E3828;
+        }
+
+        #section2 h2 {
+            color: #fff;
+            font-size: 11vmax;
+            line-height: 1;
+            font-family: 'Saint Monica Regular';
+            font-weight: normal;
+            text-transform: capitalize;
+            height: 30vh;
+            padding: 5vh;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <!-- //sidebar start-->
+                <!-- //sidebar start-->
+                <button type="button" class="menu-btn">
+                    <span></span><span></span><span></span>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <div class="menu">
+                    <div class="menu__item">
+                        <a href=" ">
+                            COCKTAILS
+                        </a>
+                    </div>
+                    <br>
+                    <div class="menu__item">
+                        <a
+                            href="http://mashija.com/%EC%B9%B5%ED%85%8C%EC%9D%BC%EC%9D%98-%EB%8F%84%EA%B5%AC%EC%99%80-%EC%9E%AC%EB%A3%8C/">
+                            MAGAZINE
+                        </a>
+                    </div>
+                    <br>
+                    <div class="menu__item">
+                        <a href="https://instagram.com/mmireahc_?igshid=OGQ5ZDc2ODk2ZA==">
+                            CONTACT
+                        </a>
+                    </div>
+                </div>
+                <script src="js/menubutton.js"></script>
+                <!-- //sidebar end-->
+                <!-- //menubar start-->
+                <li>
+                    <a href="../../index.html">Home</a>
+                    <a href="../../test.html">Test</a>
+                    <a href="#">All</a>
+                </li>
+                <li><a href="#"> </a></li>
+                <!-- //menubar end-->
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="section1">
+            <div class="text__effect1">
+                <div>Q2.</div>
+            </div>
+            <div class="text__effect2">
+            <div>더 선호하는 맛은?</div>
+            <a href="test3-1/test3-1.html"><button class="button">달달한</button></a>
+            <a href="test3-2/test3-2.html"><button class="button">상큼한</button></a>
+            <a href="test3-3/test3-3.html"><button class="button">묵직한</button></a>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        copyright ⓒ 2023 All Right Reserved by <b style="color:rgb(146, 20, 117);">Kim Chaerim</b>
+    </footer>
+
+</body>
+
+</html>

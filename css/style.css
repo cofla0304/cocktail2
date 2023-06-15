@@ -1,88 +1,94 @@
 /*----------------------------
-* メニュー開閉ボタン */
-.col {
-    display: block;
-    float: left;
-    margin: 1% 0 1% 1.6%;
-}
+* 메뉴 개폐 버튼 
+*----------------------------*/
 
-.col:first-of-type {
-    margin-left: 0;
-}
+/*버튼 바깥쪽 ※레이아웃에 따라 position이나 모양은 적절히 변경해주세요*/
 
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
-
-.row .three {
-    padding: 20px 30px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #2E3828;
-}
-
-.hamburger .line {
-    width: 28px;
-    height: 4px;
-    background-color: #2E3828;
-    display: flex;
-    margin: 6px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    z-index: 2;
-}
-
-.hamburger:hover {
+.menu-btn {
+    position: relative;
+    /*버튼 안쪽 기점이 되므로 relative 지정*/
+    background: #ffffff00;
     cursor: pointer;
+    width: 60px;
+    height: 50px;
+    border: 0px;
+    z-index: 3;
 }
 
-/*---------------------------*/
-/* ONE */
+/*버튼안쪽*/
+.menu-btn span {
+    display: inline-block;
+    transition: all .4s;
+    /*애니메이션 설정*/
+    position: absolute;
+    left: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background: #ff0000;
+    width: 45%;
+}
 
-#hamburger-1.is-active .line:nth-child(2) {
+.menu-btn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.menu-btn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.menu-btn span:nth-of-type(3) {
+    top: 31px;
+}
+
+/*
+.menu-btn {
+    margin-left: 2vw;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: #ff000046;
+    color: #fff;
+}*/
+
+/*active 클래스가 부여되면 선이 회전하여 ×에 */
+.menu-btn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 30px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.menu-btn.active span:nth-of-type(2) {
     opacity: 0;
+    /*가운데 선은 투과*/
 }
 
-#hamburger-1.is-active .line:nth-child(1) {
-    -webkit-transform: translateY(13px) rotate(45deg);
-    -ms-transform: translateY(13px) rotate(45deg);
-    -o-transform: translateY(13px) rotate(45deg);
-    transform: translateY(13px) rotate(45deg);
+.menu-btn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 30px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
 }
 
-#hamburger-1.is-active .line:nth-child(3) {
-    -webkit-transform: translateY(-13px) rotate(-45deg);
-    -ms-transform: translateY(-13px) rotate(-45deg);
-    -o-transform: translateY(-13px) rotate(-45deg);
-    transform: translateY(-13px) rotate(-45deg);
-}
 /*----------------------------
-* メニュー本体
+* 메뉴 본체
 *----------------------------*/
 .menu {
     position: fixed;
     top: 0;
-    right: 0;
-    z-index: 1;
-    width: 100vw;
+    left: 0;
+    z-index: 2;
+    width: 25vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #ffffff2a;
+    background: #ff1f1f95;
+    
 }
 
 .menu__item {
@@ -90,20 +96,20 @@
     height: auto;
     padding: .5em 1em;
     text-align: center;
-    color: #300c44;
+    color: #fff;
     box-sizing: border-box;
     font-family: 'Abel';
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 /*----------------------------
-* アニメーション部分
+* 애니메이션 부분
 *----------------------------*/
 
-/* アニメーション前のメニューの状態 */
+/* 애니메이션 전 메뉴 상태 */
 .menu {
-    transform: translateX(100vw);
-    transition: all .3s linear;
+    transform: translateX(-100vw);
+    transition: all .6s linear;
 }
 
 /* アニメーション後のメニューの状態 */
